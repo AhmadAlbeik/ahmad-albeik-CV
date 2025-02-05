@@ -16,7 +16,7 @@ body {
     margin: 0; /* Tar bort standardmarginaler */
     padding: 0; /* Tar bort standardpadding */
     overflow-x: hidden; /* Förhindrar horisontell scroll */
-    background-image: url('image/beige.png'); /* Bakgrundsbild */
+    background-image: url('beige.png'); /* Bakgrundsbild */
     background-size: cover; /* Täcker hela skärmen */
     background-position: center; /* Centrerar bilden */
     background-repeat: no-repeat; /* Förhindrar upprepning av bilden */
@@ -157,7 +157,7 @@ body {
     top: 100%; /* Placering under ikonen */
     left: 50%;
     transform: translateX(-50%); /* Centrerar texten */
-    color: rgb(255, 255, 255); /* Textfärg */
+    color: rgb(71, 71, 71); /* Textfärg */
     padding: 0.6rem 0.6rem; /* Inre utrymme */
     font-size: 1rem; /* Textstorlek */
     opacity: 0; /* Dold som standard */
