@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ahmads CV</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body class="body">
+
+    <div class="profile">
+        <div class="profile-pic">
+            <img src="./image/profile.jpg" alt="Profile Picture" class="circle-image">
+        </div>
+
+        <div class="name">
+            <h1>Ahmad Albeik</h1>
+        </div> 
+
+        <div class="info-transparent">
+            <div class="contact">
+
+                <!-- Ny knapp för de tre prickarna, placerad till höger -->
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div class="dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <p class="menu-text">Kontaktuppgifter</p>
+                </div>
+                
+                
+
+                <!-- Sociala ikoner som är dolda till att börja med -->
+                <div class="social-icons" id="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" class="icon">
+                        <i class="fab fa-facebook"></i>
+                        <span class="icon-text">Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/ahmad_albeik.06/" target="_blank" class="icon1">
+                        <i class="fab fa-instagram"></i>
+                        <span class="icon-text">Instagram</span>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" class="icon2">
+                        <i class="fab fa-twitter"></i>
+                        <span class="icon-text">Twitter</span>
+                    </a>
+                    <a href="https://www.snapchat.com" target="_blank" class="icon3">
+                        <i class="fab fa-snapchat"></i>
+                        <span class="icon-text">Snapchat</span>
+                    </a>
+                    <a href="mailto:ahmad.majd.albeik@gmail.com" class="icon4">
+                        <i class="fas fa-envelope"></i>
+                        <span class="icon-textG">ahmad.majd.albeik@gmail.com</span>
+                    </a>
+                    <a href="tel:+46761908801" class="icon5">
+                        <i class="fas fa-phone"></i>
+                        <span class="icon-textT">+46761908801</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Funktion för att toggla visningen av sociala ikoner
+        function toggleMenu() {
+            const socialIcons = document.getElementById("social-icons");
+            socialIcons.classList.toggle("show");
+        }
+    </script>
+    
+    <!--      -----------------------------          -->
+
+    <div class="btns1">
+        <div class="about-me">
+            <p class="initial-text">Om Mig</p>
+            <button class="show-details-btn" onclick="showSection('details')">Visa Detaljer</button>
+        </div>
+        
+        <div class="about-me1">
+            <p class="initial-text1">Personligt Brev</p>
+            <button class="show-details1-btn" onclick="showSection('personal-info')">Visa Detaljer</button>
+        </div>
+        
+        <div class="about-me2">
+            <p class="initial-text2">Erfarenheter</p>
+            <button class="show-details2-btn" onclick="showSection('info2')">Visa Detaljer</button>
+        </div>
+        
+        <div class="about-me3">
+            <p class="initial-text3">Referenser</p>
+            <button class="show-details3-btn" onclick="showSection('references')">Visa Detaljer</button>
+        </div>
+        <script>
+            function showSection(section) {
+                // Döljer alla sektioner
+                const sections = ['details', 'personal-info', 'info2', 'references', 'my-cv'];
+                sections.forEach(function(s) {
+                    document.querySelector('.' + s).style.display = 'none';
+                });
+        
+                // Visar den valda sektionen
+                document.querySelector('.' + section).style.display = 'block';
+            }
+        
+            // Visa "Om Mig" sektionen först när sidan laddas
+            window.onload = function() {
+                showSection('my-cv');
+            };
+        </script>
+    </div>
+
+
+    <!--      -----------------------------          -->
+
+    <div class="CV">
+        <p class="my-cv">CV</p>
+
+        <div class="details">
+            <p class="name1"><strong>Namn:</strong> Ahmad</p>
+            <p class="sir-name"><strong>Efternamn:</strong> Albeik</p>
+            <p class="age"><strong>Ålder:</strong> 19 år</p>
+            <p class="birth-date"><strong>Födelsedatum:</strong> 2006-01-01</p>
+            <p class="adress"><strong>Adress:</strong> Varbergvägen 37A</p>
+            <p class="license"><strong>Körkort:</strong> Ja (manuell)</p>
+            <p class="language"><strong>Språk:</strong> Svenska, Engelska och Arabiska</p>
+        </div>
+    
+        <div class="personal-info">
+            <h2>Personliga information</h2>
+            <p>Jag heter Ahmad och går mitt tredje år på gymnasiet där jag studerar ett teknikprogram. Jag har alltid haft ett stort intresse för att skapa nya saker och lära mig om olika ämnen, vilket har inspirerat mig att välja en utbildning som kombinerar kreativitet med teknik.</p>
+            <p>Jag söker denna möjlighet för att jag vill fortsätta växa både personligt och professionellt. Jag är engagerad, nyfiken och redo att bidra med mina kunskaper och min energi till nya arbeten.</p>
+            <p>Jag ser fram emot möjligheten att diskutera hur jag kan bidra till er verksamhet. Tveka inte att kontakta mig om ni har några frågor.</p>
+            <p>MVH Ahmad</p>
+        </div>
+    
+        <div class="info2">
+            <div class="education">
+                <h3>Utbildnig</h3>
+                <p><strong>Sven Eriksongymnasyet:</strong></p>
+                <p>2022-2025</p>
+                <p><strong>Inriktning:</strong></p>
+                <p>Information & Media</p>
+            </div>
+            <div class="experience">
+                <h3>Erfarenheter</h3>
+                <p><strong>Jordgubbs säljare:</strong></p>
+                <p>sommaren 2022 & 2023</p>
+                <p><strong>Norrby Huset (Feriearbete):</strong></p>
+                <p>sommaren 2022</p>
+                <p><strong>Torgets Förskola (Feriearbete):</strong></p>
+                <p>sommaren 2023</p>
+                <p><strong>Funktionshinder verksamhet (Borås stad):</strong></p>
+                <p>sommaren 2024</p>
+            </div>
+        </div>
+    
+        <div class="references">
+            <p class="name1"><strong>Jordgubbs försäljning:</strong> 076 123 12 34 - Abdulkarim</p>
+            <p class="name1"><strong>Norrby Huset:</strong> 076 123 12 34 - Abdi</p>
+            <p class="name1"><strong>Torgets Förskola:</strong> 076 123 12 34 - Moa</p>
+            <p class="name1"><strong>Funktionshinder verksamhet:</strong> 076 123 12 34 - Helen</p>
+        </div>
+    </div>
+    
+
+</body>
+</html>
+
+

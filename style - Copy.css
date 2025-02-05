@@ -1,0 +1,168 @@
+/* Allmänna inställningar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Profilsektion */
+.profile {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.profile .name h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.profile .circle-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Info-sektion */
+.info {
+    background-color: #007bff74;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.info h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0c49ffdb;
+    transform: scale(1.2);
+}
+
+/* CV-sektion */
+.CV {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 4rem; /* Justerat för att ge plats för knappar */
+}
+
+.CV .my-cv {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #007bff;
+}
+
+.details p, .personal-info p, .info2 div, .references p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.details strong, .info2 h3, .references strong {
+    color: #007bff;
+}
+
+.info2 h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+}
+
+.references p {
+    margin-bottom: 1.5rem;
+}
+
+/* Knappar */
+.btns1 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem auto 2rem auto;
+    position: relative;
+    z-index: 10;
+}
+
+.btns1 button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0.5rem;
+}
+
+.btns1 button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsiv design */
+@media screen and (max-width: 768px) {
+    .profile .circle-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    .CV {
+        padding: 1.5rem;
+    }
+
+    .btns1 {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .btns1 button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/*-------------------------------------------------------------------*/

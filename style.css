@@ -1,0 +1,331 @@
+/* Globala inställningar för alla element */
+* {
+    font-family: 'Poppins', sans-serif; /* Använder typsnittet Poppins för alla element */
+}
+
+/* Rotvariabler för färger */
+:root {
+    --main-color: #99815d; /* Huvudfärg */
+    --beige-color: #A8977F; /* Beige färg */
+}
+
+/* Grundläggande inställningar för body */
+body {
+    font-family: 'Roboto', sans-serif; /* Använder typsnittet Roboto som fallback */
+    line-height: 1.6; /* Radhöjd för bättre läsbarhet */
+    margin: 0; /* Tar bort standardmarginaler */
+    padding: 0; /* Tar bort standardpadding */
+    overflow-x: hidden; /* Förhindrar horisontell scroll */
+    background-image: url('image/beige.png'); /* Bakgrundsbild */
+    background-size: cover; /* Täcker hela skärmen */
+    background-position: center; /* Centrerar bilden */
+    background-repeat: no-repeat; /* Förhindrar upprepning av bilden */
+    background-attachment: fixed; /* Gör bakgrunden fast vid scroll */
+}
+
+/* Profilsektionen */
+.profile {
+    display: flex;
+    align-items: center; /* Centrerar innehållet vertikalt */
+    background-color: var(--beige-color); /* Bakgrundsfärg */
+    padding: 2rem; /* Inre utrymme */
+    width: 100%; /* Fyller hela bredden */
+    min-height: 8rem; /* Minsta höjd */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Skugga */
+    margin-bottom: 2rem; /* Utrymme under */
+    position: relative; /* Relativ positionering */
+}
+
+/* Menyikon för kontaktuppgifter */
+.menu-icon {
+    display: flex;
+    align-items: center; /* Centrerar text och prickar */
+    cursor: pointer; /* Gör att muspekaren blir en pekare */
+    gap: 10px; /* Avstånd mellan text och prickar */
+    justify-content: flex-end; /* Placering till höger */
+    position: relative; /* Relativ positionering */
+    padding-right: 5rem; /* Utrymme till höger */
+}
+
+/* Text i menyikonen */
+.menu-text {
+    font-size: 1rem; /* Textstorlek */
+    color: white; /* Textfärg */
+    margin-right: auto; /* Flyttar texten till vänster */
+}
+
+/* Container för prickarna */
+.dots {
+    display: flex;
+    flex-direction: column; /* Prickarna vertikala */
+    gap: 5px; /* Avstånd mellan prickarna */
+}
+
+/* Stil för prickarna */
+.dot {
+    width: 20px; /* Bredd */
+    height: 3px; /* Höjd */
+    background-color: #ffffff; /* Färg */
+    border-radius: 50px; /* Rundade hörn */
+}
+
+/* Profilbild och namn */
+.profile .name h1 {
+    font-size: 2rem; /* Textstorlek */
+    color: #ffffff; /* Textfärg */
+    margin-left: 2rem; /* Utrymme till vänster */
+    margin-bottom: 2rem; /* Utrymme under */
+}
+
+/* Profilbild */
+.profile .circle-image {
+    border-radius: 50%; /* Rund bild */
+    width: 120px; /* Bredd */
+    height: 120px; /* Höjd */
+    object-fit: cover; /* Fyller utrymmet */
+    border: 2px solid #ffffff; /* Kant */
+    padding: .2rem; /* Inre utrymme */
+}
+
+/* Container för kontaktuppgifter */
+.info-transparent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrerar vertikalt */
+    align-items: center; /* Centrerar horisontellt */
+    margin-right: 1rem; /* Utrymme till höger */
+    width: 25%; /* Bredd */
+    height: auto; /* Dynamisk höjd */
+    border-radius: 20px; /* Rundade hörn */
+    position: fixed; /* Fast position */
+    top: 3rem; /* Avstånd från toppen */
+    right: 3rem; /* Avstånd från höger */
+    z-index: 10; /* Ligger ovanpå andra element */
+    background-color: var(--beige-color);
+    box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.3); /* Skugga */
+    transition: box-shadow 0.3s ease-in-out; /* Mjuk övergång för skugga */
+    text-align: center; /* Centrerad text */
+}
+
+/* Text i kontaktuppgifter */
+.info-transparent p {
+    font-size: 1.2rem; /* Textstorlek */
+    color: #fff; /* Textfärg */
+}
+
+/* Sociala ikoner */
+.social-icons {
+    box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.3); /* Skugga */
+    background-color: var(--beige-color); /* Bakgrundsfärg */
+    display: none; /* Dold som standard */
+    flex-direction: row; /* Horisontell layout */
+    gap: 2rem; /* Avstånd mellan ikoner */
+    margin-top: 1rem; /* Utrymme ovanför */
+    align-items: center; /* Centrerar vertikalt */
+    justify-content: center; /* Centrerar horisontellt */
+    padding: 1rem 2rem; /* Inre utrymme */
+    border-radius: 20px; /* Rundade hörn */
+    width: fit-content; /* Anpassar bredd till innehåll */
+    margin: 0 auto; /* Centrerar horisontellt */
+    position: absolute; /* Absolut positionering */
+    top: 100%; /* Placering under menyn */
+    left: 50%; /* Centrerar horisontellt */
+    transform: translateX(-50%); /* Justering för centrering */
+    z-index: 5; /* Ligger ovanpå andra element */
+}
+
+/* Visa sociala ikoner när menyn är aktiv */
+.social-icons.show {
+    display: flex;
+}
+
+/* Stil för sociala ikoner */
+.social-icons a {
+    font-size: 1.5rem; /* Ikonstorlek */
+    color: #ffffff; /* Ikonfärg */
+    transition: transform 0.3s ease, color 0.3s ease; /* Mjuk övergång */
+    position: relative; /* Relativ positionering */
+    display: flex;
+    flex-direction: column; /* Text under ikonen */
+    align-items: center; /* Centrerar texten */
+    justify-content: center; /* Centrerar i containern */
+}
+
+/* Text under ikoner */
+.icon-text, .icon-textG, .icon-textT {
+    position: absolute;
+    top: 100%; /* Placering under ikonen */
+    left: 50%;
+    transform: translateX(-50%); /* Centrerar texten */
+    color: rgb(255, 255, 255); /* Textfärg */
+    padding: 0.6rem 0.6rem; /* Inre utrymme */
+    font-size: 1rem; /* Textstorlek */
+    opacity: 0; /* Dold som standard */
+    pointer-events: none; /* Ignorerar muspekare */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Mjuk övergång */
+    white-space: nowrap; /* Ingen radbrytning */
+    max-width: calc(100vw - 1rem); /* Maxbredd */
+    overflow: hidden; /* Döljer överflödigt innehåll */
+    text-align: center; /* Centrerad text */
+}
+
+/* Visa text vid hover */
+.social-icons a:hover .icon-text, 
+.social-icons a:hover .icon-textG, 
+.social-icons a:hover .icon-textT {
+    opacity: 1;
+}
+
+/* Förstorar ikoner vid hover */
+.icon:hover, .icon1:hover, .icon2:hover, .icon3:hover, .icon4:hover, .icon5:hover {
+    transform: scale(1.2);
+}
+
+/* Färger för ikoner vid hover */
+.icon:hover {
+    color: #007bff;
+}
+.icon1:hover {
+    color: #ff00dd;
+}
+.icon2:hover {
+    color: #00ffff;
+}
+.icon3:hover {
+    color: #fffb00;
+}
+.icon4:hover {
+    color: #ff0000;
+}
+.icon5:hover {
+    color: #b0ffa7;
+}
+
+/* CV-sektionen */
+.CV {
+    max-width: 800px; /* Maxbredd */
+    margin: auto; /* Centrerar horisontellt */
+    background-color: white; /* Bakgrundsfärg */
+    padding: 20px; /* Inre utrymme */
+    border-radius: 10px; /* Rundade hörn */
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1); /* Skugga */
+    margin-bottom: 2rem; /* Utrymme under */
+}
+
+/* Rubrik för CV */
+.my-cv {
+    font-size: 2rem; /* Textstorlek */
+    text-align: center; /* Centrerad text */
+    display: block; /* Blockelement */
+    margin: 0 auto; /* Centrerar horisontellt */
+    font-weight: bold; /* Fetstil */
+}
+
+/* Text i CV-sektioner */
+.details p, .personal-info p, .info2 p, .references p {
+    font-size: 16px; /* Textstorlek */
+    line-height: 1.5; /* Radhöjd */
+}
+
+/* Knappar */
+.btns1 {
+    display: flex;
+    justify-content: center; /* Centrerar horisontellt */
+    gap: 15px; /* Avstånd mellan knappar */
+    padding: 20px; /* Inre utrymme */
+    margin-bottom: 20px; /* Utrymme under */
+    flex-wrap: wrap; /* Radbrytning vid behov */
+}
+
+/* Text i knappar */
+.initial-text, .initial-text1, .initial-text2, .initial-text3 {
+    display: flex;
+    justify-content: center; /* Centrerar horisontellt */
+    align-items: center; /* Centrerar vertikalt */
+    text-align: center; /* Centrerad text */
+    font-weight: bold; /* Fetstil */
+}
+
+/* Grundläggande stil för knappar */
+button {
+    background-color: var(--beige-color); /* Bakgrundsfärg */
+    color: white; /* Textfärg */
+    border: none; /* Ingen kant */
+    padding: 10px 20px; /* Inre utrymme */
+    border-radius: 5px; /* Rundade hörn */
+    cursor: pointer; /* Muspekare som pekare */
+}
+
+/* Hover-effekt för knappar */
+button:hover {
+    background-color: var(--main-color); /* Ändrar bakgrundsfärg vid hover */
+}
+
+/* Responsiv design för mindre skärmar */
+@media (max-width: 768px) {
+    .CV {
+        width: 90%; /* Bredd */
+        padding: 15px; /* Inre utrymme */
+    }
+
+    .circle-image {
+        width: 120px; /* Bredd */
+        height: 120px; /* Höjd */
+    }
+
+    .social-icons {
+        flex-direction: column; /* Vertikal layout */
+        align-items: center; /* Centrerar horisontellt */
+    }
+
+    .btns1 {
+        flex-direction: column; /* Vertikal layout */
+        align-items: center; /* Centrerar horisontellt */
+    }
+}
+
+/* Ytterligare responsiv design för mycket små skärmar */
+@media (max-width: 480px) {
+    .profile h1 {
+        font-size: 24px; /* Textstorlek */
+    }
+
+    .details p, .personal-info p, .info2 p, .references p {
+        font-size: 14px; /* Textstorlek */
+    }
+}
+
+/* Anpassning av scrollbar för webbläsare som stöder Webkit */
+::-webkit-scrollbar {
+    width: 12px; /* Bredd */
+    height: 12px; /* Höjd */
+}
+
+/* Bakgrund för scrollbar */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Färg */
+    border-radius: 10px; /* Rundade hörn */
+}
+
+/* Scrollhantag */
+::-webkit-scrollbar-thumb {
+    background-color: var(--beige-color); /* Färg */
+    border-radius: 10px; /* Rundade hörn */
+    border: 3px solid #f1f1f1; /* Kant */
+    transition: background-color 0.3s ease; /* Mjuk övergång */
+}
+
+/* Hover-effekt för scrollhantag */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #6a4e1c; /* Mörkare färg */
+}
+
+/* Horisontell scrollbar */
+::-webkit-scrollbar-horizontal {
+    height: 10px; /* Höjd */
+}
+
+/* Vertikal scrollbar */
+::-webkit-scrollbar-vertical {
+    width: 10px; /* Bredd */
+}
